@@ -1,0 +1,145 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>THANK YOU</title>
+    <style>
+        body {
+            box-sizing: border-box;
+            padding: 0px;
+            margin: 0px;
+            background-color: #fefefe;
+
+        }
+
+        .main-container {
+            background: url("thankyou.png") no-repeat;
+            background-size: cover;
+            height: 100vh;
+            text-align: center;
+        }
+
+        .main-title-container {
+            margin-bottom: 30px;
+        }
+
+        .main-title {
+            font-size: 28px !important;
+            font-weight: bold;
+        }
+
+        .main-container span {
+            color: #fff;
+            font-size: 26px;
+        }
+
+        .s-title {
+            margin-left: 10px;
+            color: #5cbf00 !important;
+        }
+
+        .content-container {
+            float: right;
+            padding: 20vh;
+        }
+
+        .content {
+            margin: 15px 0;
+        }
+
+        .button {
+            padding: 20px 30px;
+            background: #5cbf00;
+            text-decoration: none;
+            color: white;
+        }
+
+        .button-container {
+            margin-top: 50px;
+
+        }
+
+        @media all and (max-width: 991px) {
+            .main-container {
+                background-position: 33% 50%;
+            }
+
+            .content-container {
+            padding: 20vh 50px 0 50px !important;
+        }
+
+        .main-container span {
+            font-size: 58px !important;
+        }
+        }
+
+        @media only screen and (max-width: 767px) {
+
+        }
+    </style>
+
+    <script>
+        fbq('track', 'Lead');
+    </script>
+    <script>
+        spix('event','lead');
+    </script>
+
+        <link rel="stylesheet" href="css/media.css">
+
+        <!-- <script src="http://eajwx.adsb4trk.com/trackpixel/track.js"></script> -->
+        <style>
+            .btn{
+                text-decoration: none;
+                padding: 15px;
+                background:#5cbf00;
+                color:#fff;
+                margin: 10px;
+                font-size:1.2em;
+            }
+        </style>
+</head>
+<body>
+<!-- <img src="https://tracking.adfnl.pro/conversion.gif" width="1" height="1" /> -->
+<img src="https://tracking.adfnl.pro/conversion.gif?cid=OPTIONAL&payout=OPTIONAL&txid=OPTIONAL" width="1" height="1"/>
+    <div class="main-container">
+
+    <div class="content-container">
+        <div class="main-title-container">
+            <span class="main-title">تم الارسال بنجاح، شكراً لك، خدمة العملاء سوف تقوم بالتواصل معك</span>
+          <br/> <br/><span dir="rtl">  سوف يتم تحويلك لخدمة العملاء بعد... <span id="countdown">10</span> ثوانٍ</span>
+        </div>
+         <div><a class="btn" href="https://api.whatsapp.com/send?phone=+966558728801+ &text=%20+ مرحبا أود الاستفسار عن المنتج">  تواصل مباشرة</a></div>
+<br/>
+        <div class="content">
+            <span class="s-title">اسم المنتج المطلوب</span><span> فيونا التجاعيد</span>
+
+        </div>
+        <div class="content">
+            <span class="s-title">  السعر</span><span> 350 SAR </span>
+
+        </div>
+        <!-- <div class="button-container">
+            <a href="#" onclick="headback()"  class="button">الرجوع الى الموقع </a>
+        </div> -->
+    </div>
+</div>
+    <script>
+        var yourMessage="مرحبا، أود تأكيد طلبي لمنتج فيونا التجاعيد وإرسال العنوان ، وأنا بحاجة للمزيد من الاستفسار";
+        message = this.yourMessage.split(' ').join('%20');
+        var seconds = document.getElementById("countdown").textContent;
+        var countdown = setInterval(function() {
+            seconds--;
+            document.getElementById("countdown").textContent = seconds;
+            if (seconds <= 0) {
+                clearInterval(countdown);
+                window.location='https://api.whatsapp.com/send?phone=+966558728801'+ '&text=%20'+ message;
+
+            }
+
+        }, 1000);
+
+    </script>
+</body>
+</html>
